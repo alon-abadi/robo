@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	firmataAdaptor := firmata.NewAdaptor("/dev/ttyACM0")
-	led := gpio.NewLedDriver(firmataAdaptor, "13")
+	firmataAdaptor := firmata.NewAdaptor("/dev/tty.usbmodem1421")
+	led := gpio.NewLedDriver(firmataAdaptor, "8")
 
 	work := func() {
 		gobot.Every(1*time.Second, func() {
